@@ -9,11 +9,15 @@
     <link rel="stylesheet" href="css/navigation.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="home-page">
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
     <!-- Navigation -->
     <nav id="main-nav">
         <div class="container">
@@ -35,7 +39,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="vanta-bg">
         <div class="hero-content">
             <div class="container split-layout">
                 <div class="hero-text">
@@ -258,6 +262,8 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

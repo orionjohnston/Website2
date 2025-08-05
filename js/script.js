@@ -1,4 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Vanta.js Globe Background
+    VANTA.GLOBE({
+        el: "#vanta-bg",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x1e5f8e, // Primary color
+        color2: 0x6a3775, // Secondary color
+        size: 0.90,
+        backgroundColor: 0xf8f9fa
+    });
+
     // Mobile Navigation Toggle
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
@@ -94,18 +110,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Animation on Scroll
-    const animateElements = document.querySelectorAll('.interest-card, .about-academic, .about-music, .award-item, .project-card, .approach-card, .recording-card');
+    // Animation on Scroll (Intersection Observer)
+    const animateElements = document.querySelectorAll('.animated-element');
     
     if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries) => {
+        const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('animated');
-                    observer.unobserve(entry.target);
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Stop observing once visible
                 }
             });
-        }, { threshold: 0.2 });
+        }, { threshold: 0.2 }); // Trigger when 20% of the element is visible
         
         animateElements.forEach(el => {
             observer.observe(el);
@@ -113,9 +129,42 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         // Fallback for browsers that don't support IntersectionObserver
         animateElements.forEach(el => {
-            el.classList.add('animated');
+            el.classList.add('is-visible'); // Just show elements if no IntersectionObserver
         });
     }
+
+    // Custom Cursor
+    const customCursor = document.createElement('div');
+    customCursor.classList.add('custom-cursor');
+    document.body.appendChild(customCursor);
+
+    document.addEventListener('mousemove', (e) => {
+        customCursor.style.left = e.clientX + 'px';
+        customCursor.style.top = e.clientY + 'px';
+    });
+
+    // Magnetic Buttons/Links
+    const magneticElements = document.querySelectorAll('.btn, .card-link, .social-link, .logo a, .nav-menu a');
+
+    magneticElements.forEach(el => {
+        el.addEventListener('mousemove', (e) => {
+            const rect = el.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const moveX = (x - centerX) * 0.3; // Adjust multiplier for stronger/weaker effect
+            const moveY = (y - centerY) * 0.3;
+
+            el.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+
+        el.addEventListener('mouseleave', () => {
+            el.style.transform = `translate(0px, 0px)`;
+        });
+    });
     
     // Contact Form Submission
     const contactForm = document.getElementById('contact-form');
@@ -155,6 +204,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 5000);
         });
     }
+
+    // Hide preloader once page is fully loaded
+    window.addEventListener('load', () => {
+        const preloader = document.querySelector('.preloader');
+        if (preloader) {
+            preloader.classList.add('hidden');
+        }
+    });
 });
 
 // Helper Functions
