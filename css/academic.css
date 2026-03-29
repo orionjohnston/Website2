@@ -4,7 +4,7 @@ Academic Page Styles
 ======================
 */
 .research-overview {
-    background-color: var(--white);
+    background-color: var(--gray-light);
 }
 
 .research-content {
@@ -19,7 +19,6 @@ Academic Page Styles
 .research-img {
     width: 100%;
     border-radius: 5px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .image-caption {
@@ -485,16 +484,16 @@ Academic Page Styles
     }
 }
 
-/* LLSVP Showcase Image */
+/* LLSVP Showcase Image — transparent PNG, no background box */
 .llsvp-showcase {
-    border-radius: 10px;
-    box-shadow: 0 15px 40px rgba(30, 95, 142, 0.25);
-    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    transition: transform var(--transition-fast);
 }
 
 .llsvp-showcase:hover {
-    transform: scale(1.02);
-    box-shadow: 0 20px 50px rgba(30, 95, 142, 0.35);
+    transform: scale(1.05);
 }
 
 /* Research Experience */

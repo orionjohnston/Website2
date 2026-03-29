@@ -135,38 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Custom Cursor
-    const customCursor = document.createElement('div');
-    customCursor.classList.add('custom-cursor');
-    document.body.appendChild(customCursor);
-
-    document.addEventListener('mousemove', (e) => {
-        customCursor.style.left = e.clientX + 'px';
-        customCursor.style.top = e.clientY + 'px';
-    });
-
-    // Magnetic Buttons/Links
-    const magneticElements = document.querySelectorAll('.btn, .card-link, .social-link, .logo a, .nav-menu a');
-
-    magneticElements.forEach(el => {
-        el.addEventListener('mousemove', (e) => {
-            const rect = el.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-
-            const moveX = (x - centerX) * 0.3; // Adjust multiplier for stronger/weaker effect
-            const moveY = (y - centerY) * 0.3;
-
-            el.style.transform = `translate(${moveX}px, ${moveY}px)`;
-        });
-
-        el.addEventListener('mouseleave', () => {
-            el.style.transform = `translate(0px, 0px)`;
-        });
-    });
+    // Custom cursor and magnetic buttons removed for cleaner UX
     
     // Contact form handler (for future Formspree upgrade)
     const contactForm = document.getElementById('contact-form');
