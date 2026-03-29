@@ -226,3 +226,22 @@ Contact Section
         flex-direction: column;
     }
 }
+
+/* Contact CTA (mailto fallback) */
+.contact-cta {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.contact-cta-text {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 500px;
+    margin: 0 auto 25px;
+}
+
+.contact-cta .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}

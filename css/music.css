@@ -380,24 +380,271 @@ Music Page Styles
     border-radius: 50%;
 }
 
+/* Instrument details without image */
+.instrument-details-only {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.instrument-details-only h3 {
+    color: var(--music-primary);
+}
+
 @media (max-width: 768px) {
     .tabs-nav {
         flex-direction: column;
         align-items: center;
         border-bottom: none;
     }
-    
+
     .tab-btn {
         width: 100%;
         text-align: center;
         border-bottom: 1px solid var(--gray);
     }
-    
+
     .instrument-layout {
         flex-direction: column;
     }
-    
+
     .instrument-image {
         width: 100%;
     }
+}
+
+/* Glover Grant Feature */
+.glover-grant {
+    background: linear-gradient(135deg, var(--music-primary) 0%, var(--music-accent) 100%);
+    color: var(--white);
+    padding: 60px 0;
+}
+
+.grant-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.grant-icon {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.grant-text h2 {
+    color: var(--white);
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.grant-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.grant-text p {
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .grant-content {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+/* Professional Experience / Positions Timeline */
+.positions {
+    background-color: var(--white);
+}
+
+.positions-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.positions-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 3px;
+    height: 100%;
+    background-color: var(--music-primary);
+}
+
+.position-item {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 40px;
+}
+
+.position-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-color: var(--music-primary);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    z-index: 2;
+}
+
+.position-content {
+    background-color: var(--gray-light);
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.position-date {
+    display: inline-block;
+    background-color: var(--music-primary);
+    color: var(--white);
+    font-size: 0.85rem;
+    padding: 3px 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.position-institution {
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+.position-details {
+    margin-top: 10px;
+}
+
+.position-details li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 6px;
+}
+
+.position-details li::before {
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background-color: var(--music-primary);
+    border-radius: 50%;
+}
+
+/* Ensemble Grid */
+.ensembles {
+    background-color: var(--gray-light);
+}
+
+.ensemble-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.ensemble-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    padding: 15px 20px;
+    border-radius: 5px;
+    border-left: 4px solid var(--music-primary);
+    transition: transform var(--transition-fast);
+}
+
+.ensemble-item:hover {
+    transform: translateX(5px);
+}
+
+.ensemble-name {
+    font-weight: 600;
+}
+
+.ensemble-date {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    white-space: nowrap;
+    margin-left: 15px;
+}
+
+/* Teachers Grid */
+.teachers {
+    background-color: var(--white);
+}
+
+.teachers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.teacher-category {
+    background-color: var(--gray-light);
+    padding: 25px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.teacher-category h3 {
+    color: var(--music-primary);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.teacher-category p {
+    margin-bottom: 0;
+    color: var(--text-light);
+}
+
+/* Affiliations (music page) */
+.music-page .affiliations {
+    background-color: var(--gray-light);
+}
+
+.music-page .affiliation-item i {
+    color: var(--music-primary);
+}
+
+/* Download CV section for music */
+.music-page .download-cv {
+    background-color: var(--music-primary);
+}
+
+.music-page .cv-download {
+    background-color: var(--white);
+    color: var(--music-primary);
+}
+
+.music-page .cv-download:hover {
+    background-color: var(--music-accent);
+    color: var(--white);
 }

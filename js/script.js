@@ -1,19 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Vanta.js Globe Background
-    VANTA.GLOBE({
-        el: "#vanta-bg",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0x1e5f8e, // Primary color
-        color2: 0x6a3775, // Secondary color
-        size: 0.90,
-        backgroundColor: 0xf8f9fa
-    });
+    // Vanta.js Globe Background (homepage only)
+    if (document.getElementById('vanta-bg') && typeof VANTA !== 'undefined') {
+        VANTA.GLOBE({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x1e5f8e,
+            color2: 0x6a3775,
+            size: 0.90,
+            backgroundColor: 0xf8f9fa
+        });
+    }
 
     // Mobile Navigation Toggle
     const navToggle = document.getElementById('nav-toggle');
@@ -166,40 +168,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Contact Form Submission
+    // Contact form handler (for future Formspree upgrade)
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Here you would typically send data to a server
-            // Since this is a static site, we'll just show a confirmation
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            // Log the form values (remove in production)
-            console.log('Form submission:', { name, email, subject, message });
-            
-            // Show success message
             const formElements = contactForm.querySelectorAll('input, textarea, button');
             formElements.forEach(el => el.disabled = true);
-            
             const successMessage = document.createElement('div');
             successMessage.className = 'success-message';
             successMessage.innerHTML = '<i class="fas fa-check-circle"></i> Thank you for your message! I will get back to you soon.';
-            
             contactForm.appendChild(successMessage);
-            
-            // Reset form after delay
             setTimeout(() => {
-                formElements.forEach(el => {
-                    el.disabled = false;
-                    el.value = '';
-                });
+                formElements.forEach(el => { el.disabled = false; el.value = ''; });
                 successMessage.remove();
             }, 5000);
         });

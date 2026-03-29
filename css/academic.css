@@ -484,3 +484,231 @@ Academic Page Styles
         text-align: center;
     }
 }
+
+/* LLSVP Showcase Image */
+.llsvp-showcase {
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(30, 95, 142, 0.25);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.llsvp-showcase:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 50px rgba(30, 95, 142, 0.35);
+}
+
+/* Research Experience */
+.research-experience {
+    background-color: var(--gray-light);
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.experience-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.experience-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    background-color: var(--academic-primary);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.experience-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.experience-date {
+    display: inline-block;
+    background-color: var(--academic-primary);
+    color: var(--white);
+    font-size: 0.85rem;
+    padding: 3px 10px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+}
+
+.experience-institution {
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 8px;
+}
+
+.experience-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Publications Subheadings */
+.publications-subheading {
+    color: var(--academic-primary);
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--gray);
+}
+
+/* Project cards without images */
+.project-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    background-color: var(--academic-primary);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.project-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: var(--white);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Teaching Section */
+.teaching {
+    background-color: var(--white);
+}
+
+.teaching-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.teaching-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: var(--gray-light);
+    padding: 30px;
+    border-radius: 5px;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.teaching-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.teaching-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    background-color: var(--academic-primary);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.teaching-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.teaching-date {
+    display: inline-block;
+    background-color: var(--academic-primary);
+    color: var(--white);
+    font-size: 0.85rem;
+    padding: 3px 10px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+}
+
+.teaching-institution {
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 8px;
+}
+
+.teaching-courses {
+    margin-top: 10px;
+}
+
+.teaching-courses li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+
+.teaching-courses li::before {
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background-color: var(--academic-primary);
+    border-radius: 50%;
+}
+
+/* Affiliations */
+.affiliations {
+    background-color: var(--gray-light);
+}
+
+.affiliations-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.affiliation-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--white);
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.affiliation-item i {
+    color: var(--academic-primary);
+    font-size: 1.3rem;
+}
