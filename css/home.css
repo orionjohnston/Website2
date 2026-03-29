@@ -126,8 +126,8 @@ About Section
 .about-academic,
 .about-music {
     flex: 1;
-    padding: 30px;
-    border-radius: 5px;
+    padding: 40px;
+    border-radius: 8px;
     background-color: var(--gray-light);
     transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
@@ -272,9 +272,9 @@ Highlights Section
 
 .highlight-slide {
     width: 100%;
-    padding: 30px;
+    padding: 40px;
     background-color: var(--gray-light);
-    border-radius: 5px;
+    border-radius: 8px;
     display: none;
 }
 

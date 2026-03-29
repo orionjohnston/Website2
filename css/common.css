@@ -1,21 +1,28 @@
-/* 
+/*
 ======================
 Section Styles
 ======================
 */
 section {
-    padding: 80px 0;
+    padding: 100px 0;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
 .section-header h2 {
     display: inline-block;
     position: relative;
     margin-bottom: 15px;
+}
+
+.section-header p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--text-light);
+    font-size: 1.1rem;
 }
 
 .divider {
@@ -31,6 +38,71 @@ section {
 
 .music-page .divider {
     background: var(--music-primary);
+}
+
+/*
+======================
+Page Hero (Academic & Music)
+======================
+*/
+.page-hero {
+    margin-top: var(--header-height);
+    padding: 120px 0 100px;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.page-hero p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+.academic-hero {
+    background: linear-gradient(135deg, var(--academic-primary) 0%, var(--academic-accent) 100%);
+    color: var(--white);
+}
+
+.academic-hero h1 {
+    color: var(--white);
+}
+
+.music-hero {
+    background: linear-gradient(135deg, var(--music-primary) 0%, var(--music-accent) 100%);
+    color: var(--white);
+}
+
+.music-hero h1 {
+    color: var(--white);
+}
+
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 80px 0 60px;
+    }
+
+    .page-hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .page-hero p {
+        font-size: 1.1rem;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
 }
 
 /* Buttons */
@@ -230,14 +302,15 @@ Contact Section
 /* Contact CTA (mailto fallback) */
 .contact-cta {
     text-align: center;
-    padding: 20px 0;
+    padding: 30px 0;
 }
 
 .contact-cta-text {
     font-size: 1.1rem;
     color: var(--text-light);
-    max-width: 500px;
-    margin: 0 auto 25px;
+    max-width: 550px;
+    margin: 0 auto 30px;
+    line-height: 1.7;
 }
 
 .contact-cta .btn {

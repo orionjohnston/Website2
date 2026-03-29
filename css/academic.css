@@ -9,7 +9,8 @@ Academic Page Styles
 
 .research-content {
     display: flex;
-    gap: 40px;
+    gap: 50px;
+    align-items: flex-start;
 }
 
 .research-image {
@@ -79,7 +80,7 @@ Academic Page Styles
 }
 
 .education {
-    background-color: var(--gray-light);
+    background-color: var(--white);
 }
 
 .education-timeline {
@@ -101,7 +102,11 @@ Academic Page Styles
 .timeline-item {
     position: relative;
     padding-left: 60px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
 }
 
 .timeline-icon {
@@ -144,14 +149,28 @@ Academic Page Styles
 }
 
 .publications {
-    background-color: var(--white);
+    background-color: var(--gray-light);
 }
 
 .publication-item {
     display: flex;
-    margin-bottom: 30px;
-    padding-bottom: 30px;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
     border-bottom: 1px solid var(--gray);
+}
+
+.publication-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.publications-list {
+    margin-bottom: 40px;
+}
+
+.publications-list:last-child {
+    margin-bottom: 0;
 }
 
 .publication-year {
@@ -225,7 +244,7 @@ Academic Page Styles
 }
 
 .projects {
-    background-color: var(--gray-light);
+    background-color: var(--white);
 }
 
 .projects-container {
@@ -234,39 +253,8 @@ Academic Page Styles
     gap: 30px;
 }
 
-.project-card {
-    display: flex;
-    background-color: var(--white);
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-.project-image {
-    flex: 0 0 250px;
-    overflow: hidden;
-}
-
-.project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform var(--transition-fast);
-}
-
-.project-card:hover .project-image img {
-    transform: scale(1.1);
-}
-
 .project-content {
     flex: 1;
-    padding: 20px;
 }
 
 .project-date {
@@ -315,14 +303,18 @@ Academic Page Styles
     .project-card {
         flex-direction: column;
     }
-    
-    .project-image {
-        height: 200px;
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .teaching-grid {
+        grid-template-columns: 1fr;
     }
 }
 
 .skills {
-    background-color: var(--white);
+    background-color: var(--gray-light);
 }
 
 .skills-container {
@@ -384,7 +376,7 @@ Academic Page Styles
 }
 
 .awards {
-    background-color: var(--gray-light);
+    background-color: var(--white);
 }
 
 .awards-container {
@@ -498,13 +490,13 @@ Academic Page Styles
 
 /* Research Experience */
 .research-experience {
-    background-color: var(--gray-light);
+    background-color: var(--white);
 }
 
 .experience-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
 }
 
 .experience-card {
@@ -603,7 +595,7 @@ Academic Page Styles
 
 /* Teaching Section */
 .teaching {
-    background-color: var(--white);
+    background-color: var(--gray-light);
 }
 
 .teaching-grid {
@@ -616,7 +608,7 @@ Academic Page Styles
     display: flex;
     align-items: flex-start;
     gap: 20px;
-    background-color: var(--gray-light);
+    background-color: var(--white);
     padding: 30px;
     border-radius: 5px;
     transition: transform var(--transition-fast), box-shadow var(--transition-fast);

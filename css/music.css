@@ -9,7 +9,8 @@ Music Page Styles
 
 .bio-content {
     display: flex;
-    gap: 40px;
+    gap: 50px;
+    align-items: flex-start;
 }
 
 .bio-image {
@@ -267,7 +268,7 @@ Music Page Styles
 }
 
 .instruments {
-    background-color: var(--white);
+    background-color: var(--gray-light);
 }
 
 .instruments-tabs {
@@ -353,7 +354,7 @@ Music Page Styles
 
 .instrument-specs {
     margin-top: 20px;
-    background-color: var(--gray-light);
+    background-color: var(--white);
     padding: 20px;
     border-radius: 5px;
 }
@@ -627,7 +628,7 @@ Music Page Styles
 
 /* Affiliations (music page) */
 .music-page .affiliations {
-    background-color: var(--gray-light);
+    background-color: var(--white);
 }
 
 .music-page .affiliation-item i {
